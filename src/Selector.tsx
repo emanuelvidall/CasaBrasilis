@@ -10,7 +10,7 @@ import { BsGearFill } from "react-icons/bs";
 
 export default function Selector({ name, isSelected, onClick }: SelectorProps) {
   const selectedStyle = isSelected
-    ? "bg-slate-300 bg-[#19274f] text-white rounded-xl mt-2 mb-2 flex flex-row items-center justify-start p-2 gap-4 cursor-pointer"
+    ? "bg-[#19274f] text-white rounded-xl mt-2 mb-2 flex flex-row items-center justify-start p-2 gap-4 cursor-pointer"
     : "bg-white hover:bg-slate-300 rounded-xl mt-2 mb-2 flex flex-row items-center justify-start p-2 gap-4 cursor-pointer";
 
   return (
