@@ -21,6 +21,7 @@ export default function PropertyCard({
       <h1>{city}</h1>
       <h1>{state}</h1>
       <h1>{zipcode}</h1>
+      <h1>{price}</h1>
     </div>
   );
 }
