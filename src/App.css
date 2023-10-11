@@ -5,7 +5,16 @@
   text-align: center;
 } */
 
-.logo{
+.logo {
   font-family: 'Questrial', sans-serif;
   font-weight: bold;
+}
+
+.cards::-webkit-scrollbar {
+  display: none;
+}
+
+.cards {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
