@@ -13,7 +13,7 @@ const mockupData = [
     bedrooms: 4,
     size: 2500,
     parking: 2,
-    buy_price: 750000,
+    buy_price: 850000, // Random buy_price
     interest_rate: 4,
     finance_options: 30,
     rental_price: 3500,
@@ -31,7 +31,7 @@ const mockupData = [
     bedrooms: 2,
     size: 1200,
     parking: 1,
-    buy_price: 1100000,
+    buy_price: 1300000, // Random buy_price
     interest_rate: 3.5,
     finance_options: 15,
     rental_price: 4500,
@@ -49,7 +49,7 @@ const mockupData = [
     bedrooms: 3,
     size: 1800,
     parking: 1,
-    buy_price: 450000,
+    buy_price: 480000, // Random buy_price
     interest_rate: 4.2,
     finance_options: 20,
     rental_price: 2800,
@@ -67,7 +67,7 @@ const mockupData = [
     bedrooms: 1,
     size: 800,
     parking: 0,
-    buy_price: 300000,
+    buy_price: 320000, // Random buy_price
     interest_rate: 3.8,
     finance_options: 25,
     rental_price: 2000,
@@ -85,7 +85,7 @@ const mockupData = [
     bedrooms: 3,
     size: 3500,
     parking: 2,
-    buy_price: 1800000,
+    buy_price: 1900000, // Random buy_price
     interest_rate: 3.6,
     finance_options: 30,
     rental_price: 6000,
@@ -103,7 +103,7 @@ const mockupData = [
     bedrooms: 5,
     size: 4000,
     parking: 3,
-    buy_price: 1200000,
+    buy_price: 1400000, // Random buy_price
     interest_rate: 4.5,
     finance_options: 20,
     rental_price: 4500,
@@ -121,7 +121,7 @@ const mockupData = [
     bedrooms: 4,
     size: 2200,
     parking: 2,
-    buy_price: 800000,
+    buy_price: 900000, // Random buy_price
     interest_rate: 3.7,
     finance_options: 25,
     rental_price: 3500,
@@ -139,7 +139,7 @@ const mockupData = [
     bedrooms: 2,
     size: 1400,
     parking: 1,
-    buy_price: 400000,
+    buy_price: 430000, // Random buy_price
     interest_rate: 4.0,
     finance_options: 20,
     rental_price: 2500,
@@ -157,7 +157,7 @@ const mockupData = [
     bedrooms: 4,
     size: 2800,
     parking: 1,
-    buy_price: 1600000,
+    buy_price: 1700000, // Random buy_price
     interest_rate: 3.9,
     finance_options: 30,
     rental_price: 5500,
@@ -175,22 +175,24 @@ const mockupData = [
     bedrooms: 8,
     size: 8000,
     parking: 4,
+    buy_price: 2000000, // Random buy_price
   },
 ];
 
 export default function Dashboard() {
   return (
     <div className='w-full h-[87%] flex'>
-      <div className='w-[35%] overflow-y-scroll cards border-r border-slate-200 pt-10 items-center flex flex-col gap-4'>
+      <div className='w-[35%] overflow-y-scroll cards border-r border-slate-200 pt-10 items-center flex flex-col gap-4 px-4'>
         {mockupData.map((property) => {
           return (
             <PropertyCard
               key={property.id}
-              city={property.city}
-              state={property.state}
               street={property.street}
               neighborhood={property.neighborhood}
-              zipcode={property.zipcode}
+              price={property.buy_price}
+              bedrooms={property.bedrooms}
+              bathrooms={property.bathrooms}
+              size={property.size}
             />
           );
         })}
